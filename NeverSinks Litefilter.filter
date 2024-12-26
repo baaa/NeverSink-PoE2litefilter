@@ -336,9 +336,9 @@ SetFontSize 40
 
 Show
 BaseType "Simulacrum" "Breachstone" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Expedition Logbook" "Test of"
-SetTextColor 255 207 255
-SetBorderColor 255 207 255
-SetBackgroundColor 65 20 80
+SetTextColor 255 85 85
+SetBorderColor 255 85 85
+SetBackgroundColor 40 0 30
 PlayAlertSound 2 300
 PlayEffect Purple
 MinimapIcon 1 Purple Square
@@ -384,8 +384,8 @@ Show
  SetFontSize 45
  SetTextColor 0 0 0 255
  SetBackgroundColor 235 235 235 255
- PlayAlertSound 5 300
- PlayEffect Yellow
+ PlayAlertSound 5 200
+ PlayEffect Red
  MinimapIcon 1 Red Square
 
 Show
@@ -395,7 +395,8 @@ Show
  SetFontSize 40
  SetTextColor 0 0 0 255
  SetBackgroundColor 235 235 235 255
- PlayEffect Yellow
+ PlayEffect Red
+ PlayAlertSound 5 200
  MinimapIcon 1 Red Square
 
 
@@ -455,12 +456,12 @@ Rarity Magic
 SetFontSize 40
 
 #--------------------------
-# Alc base dex/int
+# Alchemy base dex/int
 #--------------------------
 Show
  Rarity Normal
  Class "Body Armours"
- #BaseType "Expert "
+ ItemLevel >= 79
  BaseType == "Expert Scalper's Jacket" "Expert Wayfarer Jacket" "Expert Waxed Jacket"
  SetFontSize 28
  SetTextColor 0 0 80
@@ -474,14 +475,39 @@ Show
  Rarity Normal
  Class "Body Armours"
  BaseType "Expert "
+ ItemLevel >= 79
  SetFontSize 25
  SetTextColor 0 0 80
  SetBorderColor 0 200 80
  SetBackgroundColor 240 240 240
- #PlayAlertSound 10 150
  PlayEffect White
- #MinimapIcon 2 White Star
 
+#--------------------------
+# Alchemy base x-bow
+#--------------------------
+Show
+ Rarity Normal
+ Class Crossbows
+ BaseType == "Expert Forlorn Crossbow" "Expert Tense Crossbow" "Expert Varnished Crossbow"
+ ItemLevel >= 81
+ SetFontSize 28
+ SetTextColor 0 0 80
+ SetBorderColor 0 200 80
+ SetBackgroundColor 240 240 240
+ PlayAlertSound 10 150
+ PlayEffect White
+ MinimapIcon 2 White Star
+
+Show
+ Rarity Normal
+ Class Crossbows
+ ItemLevel >= 81
+ BaseType "Expert "
+ SetFontSize 25
+ SetTextColor 0 0 80
+ SetBorderColor 0 200 80
+ SetBackgroundColor 240 240 240
+ PlayEffect White
 
 #--------------------------
 # Salvagable Items
