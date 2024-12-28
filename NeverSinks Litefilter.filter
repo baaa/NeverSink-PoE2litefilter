@@ -151,24 +151,19 @@ MinimapIcon 0 Cyan Diamond
 PlayAlertSound 2 300
 PlayEffect Cyan
 
-# Special Highlight - Breach Rings
-Show 
-Rarity Rare
-BaseType == "Breach Ring"
-SetTextColor 0 240 190
-SetBorderColor 0 240 190
-SetFontSize 40
-MinimapIcon 1 Cyan Diamond
-PlayEffect Cyan
-PlayAlertSound 2 300
-
-Show 
-Rarity <= Magic
-BaseType == "Breach Ring"
-SetTextColor 0 240 190
-SetFontSize 35
-MinimapIcon 2 Cyan Diamond
-PlayEffect Cyan Temp
+# Breach rings
+Show
+	Mirrored False
+	Corrupted False
+	Rarity Normal Magic Rare
+	BaseType == "Breach Ring"
+	SetFontSize 45
+	SetTextColor 0 240 190 255
+	SetBorderColor 0 240 190 255
+	SetBackgroundColor 20 20 0 255
+	PlayEffect Blue
+	MinimapIcon 1 Blue Diamond
+	PlayAlertSound 3 300
 
 # Special A Tier - Sanctum Relics
 Show 
@@ -553,9 +548,21 @@ Show
 Rarity Rare
 SetFontSize 35
 
+# High lvl flask
+Show
+ AreaLevel > 70
+ ItemLevel >= 83
+ Rarity Normal
+ Class "Flasks"
+ SetFontSize 28
+ SetTextColor 90 0 0
+ SetBorderColor 0 200 80
+ SetBackgroundColor 240 240 240
+
 #--------------------------
 # Hide Rules (only high level), super light edition
 #--------------------------
+
 
 Hide
 Quality = 0
